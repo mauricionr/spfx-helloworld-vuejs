@@ -1,0 +1,10 @@
+{
+  "solution": {
+    "name": "spfx-no-framework-client-side-solution",
+    "id": "961dc776-3be2-4f6e-9b31-2835215ec887",
+    "version": "1.0.0.0"
+  },
+  "paths": {
+    "zippedPackage": "solution/spfx-no-framework.spapp"
+  }
+}
