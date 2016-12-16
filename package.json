@@ -9,8 +9,6 @@
     "@microsoft/sp-client-base": "~0.5.1",
     "@microsoft/sp-client-preview": "~0.7.1",
     "@microsoft/sp-webpart-base": "~0.2.1",
-    "vue": "^2.1.6",
-    "vue-ts": "^1.0.11",
     "vue-typescript": "^0.7.0"
   },
   "devDependencies": {
