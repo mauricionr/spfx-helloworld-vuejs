@@ -10,21 +10,6 @@ import * as strings from 'helloWorldNoFrameworkStrings';
 import { IHelloWorldNoFrameworkWebPartProps } from './IHelloWorldNoFrameworkWebPartProps';
 import { VueComponent } from 'vue-typescript';
 
-const AppTemplate = `
-<section id="root-app">
-  <h3>Hello World</h3>
-</section>
-`;
-
-
-@VueComponent({
-  template: AppTemplate
-})
-
-default class AppComponent extends Vue {
-  
-}
-
 export default class HelloWorldNoFrameworkWebPart extends BaseClientSideWebPart<IHelloWorldNoFrameworkWebPartProps> {
 
   public constructor(context: IWebPartContext) {
@@ -32,7 +17,7 @@ export default class HelloWorldNoFrameworkWebPart extends BaseClientSideWebPart<
   }
 
   public render(): void {
-    this.domElement.innerHTML = AppTemplate;
+    this.domElement.innerHTML = '<section id="app">Hello world</section>'
   }
 
   protected get propertyPaneSettings(): IPropertyPaneSettings {
@@ -46,9 +31,7 @@ export default class HelloWorldNoFrameworkWebPart extends BaseClientSideWebPart<
             {
               groupName: strings.BasicGroupName,
               groupFields: [
-                PropertyPaneTextField('description', {
-                  label: strings.DescriptionFieldLabel
-                })
+                PropertyPaneTextField('description', { label: strings.DescriptionFieldLabel })
               ]
             }
           ]
